@@ -5,29 +5,28 @@ import javax.persistence.*;
 
 @Entity
 public class TipoPokemon {
-    public id getPokemon() {
-        return Pokemon;
-    }
-
-    public void setPokemon(id pokemon) {
-        Pokemon = pokemon;
-    }
-
-    public id getTipo() {
-        return Tipo;
-    }
-
-    public void setTipo(id tipo) {
-        Tipo = tipo;
-    }
-
     @Id
    @GeneratedValue(strategy = GenerationType.IDENTITY)
-   private id Pokemon;
+   private int idPokemon;
 
    @Id
    @Column
-   private id Tipo;
+   private int idTipo;
 
+    public int getIdPokemon() {
+        return idPokemon;
+    }
+
+    public void setIdPokemon(int idPokemon) {
+        this.idPokemon = idPokemon;
+    }
+
+    public int getIdTipo() {
+        return idTipo;
+    }
+
+    public void setIdTipo(int idTipo) {
+        this.idTipo = idTipo;
+    }
 }
 
