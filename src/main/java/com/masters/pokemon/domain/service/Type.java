@@ -1,18 +1,26 @@
-package com.masters.pokemon;
+package com.masters.pokemon.domain.service;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
-@Entity
+/**
+ * This class saves variables,setters and getters
+ * for every pokemon type
+ */
 public class Type {
-    public int getIdType() {
-        return idType;
+
+    private  int typeId;
+
+    private String name;
+
+    public int getTypeId() {
+        return typeId;
     }
 
-    public void setIdType(int idType) {
-        this.idType = idType;
+    public void setTypeId(int typeId) {
+        this.typeId = typeId;
     }
 
     public String getName() {
@@ -23,10 +31,5 @@ public class Type {
         this.name = name;
     }
 
-    @Id
-    @GeneratedValue
-    private  int idType;
 
-    @Column
-    private String name;
 }

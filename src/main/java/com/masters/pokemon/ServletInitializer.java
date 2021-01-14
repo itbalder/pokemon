@@ -1,5 +1,6 @@
 package com.masters.pokemon;
 
+import com.masters.pokemon.PokemonApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
 
