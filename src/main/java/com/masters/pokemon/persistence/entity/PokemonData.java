@@ -17,10 +17,6 @@ public class PokemonData {
     private Double weight;
     @Column(name = "descripcion")
     private String description;
-    @Column(name = "cargaAtaque")
-    private int attackCharges;
-    @Column(name = "tipoId")
-    private int typeId;
     @Column(name = "prioridad")
     private int priority;
     @Column(name = "evolucion")
