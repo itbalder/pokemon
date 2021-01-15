@@ -6,7 +6,7 @@ package com.masters.pokemon.domain.service;
  */
 
 public class PokemonData {
-    private int dataId;
+    private String dataId;
     private String name;
     private Double height;
     private Double weight;
@@ -14,7 +14,13 @@ public class PokemonData {
     private int priority;
     private boolean evolution;
 
+    public String getDataId() {
+        return dataId;
+    }
 
+    public void setDataId(String dataId) {
+        this.dataId = dataId;
+    }
 
     public Double getWeight() {
         return weight;
@@ -26,13 +32,7 @@ public class PokemonData {
 
 
 
-    public int getDataId() {
-        return dataId;
-    }
 
-    public void setDataId(int dataId) {
-        this.dataId = dataId;
-    }
 
     public String getName() {
         return name;

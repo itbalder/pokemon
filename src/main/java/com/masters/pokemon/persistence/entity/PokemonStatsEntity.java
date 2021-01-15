@@ -5,11 +5,16 @@ import javax.persistence.*;
 @Entity
 @Table(name = "estadisticasPokemon")
 
-public class PokemonStats {
+public class PokemonStatsEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "pokemonId")
-    private int pokemonId;
+    @Column(name = "estadisticaId")
+    private int statId;
+
+    @ManyToOne
+    @JoinColumn(name = "datosId", insertable = false, updatable = false)
+    private int dataId;
+
     @Column(name = "puntosVida")
     private int healthPoints;
     @Column(name = "ataque")

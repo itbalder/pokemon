@@ -4,19 +4,19 @@ package com.masters.pokemon.domain.service;
  * for every pokemon stat implemented to a pokemon
  */
 public class PokemonStats {
-    private int pokemonId;
+    private int statId;
     private int healthPoints;
     private int attack;
     private int defense;
     private int special;
     private int speed;
 
-    public int getPokemonId() {
-        return pokemonId;
+    public int getStatId() {
+        return statId;
     }
 
-    public void setPokemonId(int pokemonId) {
-        this.pokemonId = pokemonId;
+    public void setStatId(int statId) {
+        this.statId = statId;
     }
 
     public int getHealthPoints() {

@@ -4,11 +4,11 @@ import javax.persistence.*;
 
 @Entity
 @Table(name = "datosPokemon")
-public class PokemonData {
+public class PokemonDataEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "datosId")
-    private int dataId;
+    private String dataId;
     @Column(name = "nombre")
     private String name;
     @Column(name = "altura")
