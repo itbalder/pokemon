@@ -1,6 +1,7 @@
 package com.masters.pokemon.persistence.entity;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
 @Table(name = "datosPokemon")
@@ -22,6 +23,11 @@ public class PokemonDataEntity {
     @Column(name = "evolucion")
     private boolean evolution;
 
+    @OneToMany(mappedBy = "pokemonDataEntity")
+    private List<PokemonDataEntity> estadisticasPokemon;
+
+    @OneToMany(mappedBy = "pokemonData")
+    private List<PokemonDataEntity> tipo;
 
 
 }

@@ -1,13 +1,14 @@
 package com.masters.pokemon.persistence.entity;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Table;
+import javax.persistence.*;
+import java.util.List;
 
 @Entity
 @Table(name = "tipo")
 public class TypeEntity {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "idTipo")
     private  int typeId;
     @Column(name = "nombre")
@@ -28,4 +29,10 @@ public class TypeEntity {
     public void setName(String name) {
         this.name = name;
     }
+
+    @OneToMany(mappedBy = "typeEntity")
+    private List<TypePk> movimientosPokemon;
+
+    @OneToMany(mappedBy = "typeEntity")
+    private List<PokemonTypeEntity> datosPokemon;
 }

@@ -11,9 +11,8 @@ public class PokemonStatsEntity {
     @Column(name = "estadisticaId")
     private int statId;
 
-    @ManyToOne
-    @JoinColumn(name = "datosId", insertable = false, updatable = false)
-    private int dataId;
+    @Column(name = "datosId")
+    private String dataId;
 
     @Column(name = "puntosVida")
     private int healthPoints;
@@ -25,5 +24,10 @@ public class PokemonStatsEntity {
     private int special;
     @Column(name = "velocidad")
     private int speed;
+
+    @ManyToOne
+    @JoinColumn(name = "datosId", insertable = false, updatable = false)
+    private PokemonDataEntity pokemonDataEntity;
+
 
 }

@@ -9,6 +9,10 @@ public class PokemonMovementsEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "movimientosId")
     private int movementId;
+
+    @Column(name = "idTipo")
+    private  int typeId;
+
     @Column(name = "nombre")
     private String name;
     @Column(name = "potencia")
@@ -19,4 +23,8 @@ public class PokemonMovementsEntity {
     private String description;
     @Column(name = "cargaAtaque")
     private int attackCharges;
+
+    @ManyToOne
+    @JoinColumn(name = "idTipo", insertable = false, updatable = false)
+    private TypeEntity typeEntity;
 }

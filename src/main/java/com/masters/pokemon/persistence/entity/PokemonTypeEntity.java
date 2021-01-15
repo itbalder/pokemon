@@ -15,13 +15,13 @@ public class PokemonTypeEntity {
     @ManyToOne
     @MapsId("dataId")
     @JoinColumn(name = "datosId", insertable = false, updatable = false)
-    private PokemonData data;
+    private PokemonData pokemonData;
 
 
     @ManyToOne
     @MapsId("typeId")
     @JoinColumn(name = "idTipo", insertable = false, updatable = false)
-    private TypeEntity type;
+    private TypeEntity typeEntity;
 
     public TypePk getId() {
         return id;
@@ -31,19 +31,19 @@ public class PokemonTypeEntity {
         this.id = id;
     }
 
-    public PokemonData getData() {
-        return data;
+    public PokemonData getPokemonData() {
+        return pokemonData;
     }
 
-    public void setData(PokemonData data) {
-        this.data = data;
+    public void setPokemonData(PokemonData pokemonData) {
+        this.pokemonData = pokemonData;
     }
 
-    public TypeEntity getType() {
-        return type;
+    public TypeEntity getTypeEntity() {
+        return typeEntity;
     }
 
-    public void setType(TypeEntity type) {
-        this.type = type;
+    public void setTypeEntity(TypeEntity typeEntity) {
+        this.typeEntity = typeEntity;
     }
 }

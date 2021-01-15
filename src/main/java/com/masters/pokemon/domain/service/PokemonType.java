@@ -1,7 +1,11 @@
 package com.masters.pokemon.domain.service;
 
 
+import com.masters.pokemon.persistence.entity.PokemonDataEntity;
+
 import javax.persistence.*;
+import java.util.List;
+
 /**
  * This class saves variables,setters and getters
  * for every pokemon type implemented to a pokemon
@@ -27,5 +31,6 @@ public class PokemonType {
     public void setTypeId(int typeId) {
         this.typeId = typeId;
     }
+
 }
 
