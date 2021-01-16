@@ -25,7 +25,7 @@ public class PokemonDataEntity {
     @Column(name = "tipoId")
     private Integer typeId;
 
-    @ManyToMany
+    @ManyToOne
     @JoinColumn(name = "tipoId", insertable = false, updatable = false)
     private TypeEntity typeEntity;
 

@@ -6,11 +6,11 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SpringBootApplication
 public class PokemonApplication {
 
-	public static void main(String[] args) {
-		SpringApplication.run(PokemonApplication.class, args);
-
-		//System.out.println("estos son cambios para git ejemplo");
+			public static void main(String[] args) {
+			SpringApplication.run(PokemonApplication.class, args);
 
 	}
 
 }
+
+

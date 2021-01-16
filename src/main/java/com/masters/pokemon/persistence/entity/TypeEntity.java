@@ -30,7 +30,7 @@ public class TypeEntity {
         this.nameType = nameType;
     }
 
-    @ManyToMany(mappedBy = "typeEntity")
+    @OneToMany(mappedBy = "typeEntity")
     private List<PokemonDataEntity> pokemonDataEntities;
 
     @OneToMany(mappedBy = "typeEntity")
