@@ -34,7 +34,7 @@ public class PokemonDataRepository implements PokemonRepository {
     @Override
     public Optional<List<PokemonData>>getDescription(String pokemonDescription){
         Optional<List<PokemonDataEntity>> pokemonDataEntities=pokemonDataCrudRepository.findByDescriptionPokemon(pokemonDescription);
-        //Lo convierte a PokemonDataEntitu y lo retorna
+        //Lo convierte a PokemonDataEntity y lo retorna
         return pokemonDataEntities.map(poke ->mapper.toPokemonsData(poke));
     }
     //Obtener un poquemon por su Id por medio del findById que pertenece al JP
