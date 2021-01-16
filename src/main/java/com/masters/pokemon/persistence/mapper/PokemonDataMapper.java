@@ -15,13 +15,13 @@ public interface PokemonDataMapper {
 
     @Mappings({
             @Mapping(source = "dataId",target ="idDataPokemon" ),
-            @Mapping(source = "namePokemon",target ="namePokemon" ),
+            @Mapping(source = "namePokemon",target ="pokemonName" ),
             @Mapping(source = "heightPokemon",target ="pokemonHeight" ),
             @Mapping(source = "weightPokemon",target ="pokemonWeight" ),
             @Mapping(source = "descriptionPokemon",target ="pokemonDescription" ),
             @Mapping(source = "priorityPokemon",target ="pokemonPriority" ),
             @Mapping(source = "evolutionPokemon",target ="pokemonEvolution" ),
-            @Mapping(source = "typeId",target ="type" ),
+            @Mapping(source = "typeId",target ="idType" ),
     })
 
     //Conversion inversa PokemonData a PokemonDataEntity

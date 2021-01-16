@@ -11,16 +11,16 @@ import javax.persistence.Id;
  */
 public class Type {
 
-    private  Integer IdType;
+    private  Integer idType;
 
     private String TypeName;
 
     public Integer getIdType() {
-        return IdType;
+        return idType;
     }
 
     public void setIdType(Integer idType) {
-        IdType = idType;
+        this.idType = idType;
     }
 
     public String getTypeName() {

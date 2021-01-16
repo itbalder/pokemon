@@ -12,8 +12,8 @@ public interface TypeMapper {
 
     @Mappings(
             {
-                    @Mapping(source = "typeId",target ="IdType"),
-                    @Mapping(source = "nameType",target ="TypeName"),
+                    @Mapping(source = "typeId",target ="idType"),
+                    @Mapping(source = "nameType",target ="typeName"),
 
             }
     )

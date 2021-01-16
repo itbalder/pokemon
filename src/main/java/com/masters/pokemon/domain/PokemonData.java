@@ -1,9 +1,12 @@
 package com.masters.pokemon.domain;
 
+import com.masters.pokemon.persistence.entity.TypeEntity;
+
 /**
  * This class saves variables,setters and getters
  * for every pokemon created
  */
+
 
 public class PokemonData {
     private String idDataPokemon;
@@ -13,7 +16,8 @@ public class PokemonData {
     private String pokemonDescription;
     private Integer pokemonPriority;
     private String pokemonEvolution;
-    private Type type;
+    private  Integer idType;
+    private Type Type;
 
     public String getIdDataPokemon() {
         return idDataPokemon;
@@ -71,11 +75,19 @@ public class PokemonData {
         this.pokemonEvolution = pokemonEvolution;
     }
 
-    public Type getType() {
-        return type;
+    public Integer getIdType() {
+        return idType;
     }
 
-    public void setType(Type type) {
-        this.type = type;
+    public void setIdType(Integer idType) {
+        this.idType = idType;
+    }
+
+    public com.masters.pokemon.domain.Type getType() {
+        return Type;
+    }
+
+    public void setType(com.masters.pokemon.domain.Type type) {
+        Type = type;
     }
 }
