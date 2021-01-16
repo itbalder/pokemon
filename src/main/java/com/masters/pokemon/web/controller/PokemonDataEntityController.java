@@ -19,20 +19,19 @@ public class PokemonDataEntityController {
     private PokemonDataService pokemonDataService;
 
     @GetMapping("/all")
-    public List<PokemonData> getAll(){
+    public List<PokemonData> getAll() {
         return pokemonDataService.getAll();
     }
 
-    public Optional<PokemonData> getPokemon(int idDataPokemon){
+    public Optional<PokemonData> getPokemon(int idDataPokemon) {
         return pokemonDataService.getPokemon(idDataPokemon);
     }
-    public Optional<List<PokemonData>> getByType(int type){
-        return pokemonDataService.getByType(type);
-    }
-    public PokemonData save(PokemonData pokemonData){
+
+    public PokemonData save(PokemonData pokemonData) {
         return pokemonDataService.save(pokemonData);
     }
-    public boolean delete(int idDataPokemon){
+
+    public boolean delete(int idDataPokemon) {
         return pokemonDataService.delete(idDataPokemon);
     }
 
