@@ -29,7 +29,7 @@ public class PokemonDataEntity {
     @JoinColumn(name = "tipoId", insertable = false, updatable = false)
     private TypeEntity typeEntity;
 
-    @OneToMany(mappedBy = "pokemonDataEntity")
+    @OneToMany (mappedBy = "pokemonDataEntity")
     private List<PokemonStatsEntity> pokemonStatsEntities;
 
     public Integer getDataId() {
