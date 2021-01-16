@@ -27,5 +27,179 @@
         </div>
     </div>
 </nav><br />
+<div class="container">
+    <div class="text-center">
+        <h3>Edita tu pokemón</h3>
+    </div>
+    <!--Formulario para crear un pokemón, datos personales del pokemón -->
+    <form>
+        <div class="row">
+            <div class="mb-3 row">
+                <!--Input para ingresar el nombre-->
+                <label for="nombre" class="col-sm-2 col-form-label">Nombre:</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" id="nombre">
+                </div>
+            </div>
+        </div>
+        <div class="row ">
+            <div class="mb-3 row">
+                <!--Input para ingresar el tipo de pokemon mediante un select-->
+                <label for="_tipo" class="col-sm-2 col-form-label">Tipo:</label>
+                <div class="col-sm-10">
+                    <select name="tipo" id="_tipo" class="form-control">
+                        <option value="agua">Agua</option>
+                        <option value="bicho">Bicho</option>
+                        <option value="dragon">Dragón</option>
+                        <option value="electrico">Eléctrico</option>
+                        <option value="fantasma">Fantasma</option>
+                        <option value="fuego">Fuego</option>
+                        <option value="hielo">Hielo</option>
+                        <option value="lucha">Lucha</option>
+                        <option value="normal">Normal</option>
+                        <option value="planta">Planta</option>
+                        <option value="psiquico">psiquico</option>
+                        <option value="roca">Roca</option>
+                        <option value="tierra">Tierra</option>
+                        <option value="veneno">Veneno</option>
+                        <option value="volador">Volador</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="mb-3 row">
+                <!--Input para ingresar el peso de un pokemón-->
+                <label for="peso" class="col-sm-2 col-form-label">Peso:</label>
+                <div class="col-sm-10">
+                    <input type="number" class="form-control" id="peso">
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="mb-3 row">
+                <!--Input para ingresar la altura de pokemon en metros-->
+                <label for="altura" class="col-sm-2 col-form-label">Altura:</label>
+                <div class="col-sm-10">
+                    <input type="number" class="form-control" id="altura">
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="mb-3 row">
+                <!--Input para ingresar una descripción no tan detallada de quien es el pokemón-->
+                <label for="descripcion" class="col-sm-2 col-form-label">Descripción:</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" id="descripcion">
+                </div>
+            </div>
+        </div>
+
+        <!--Esta parte es para los datos de habilidades del pokemón-->
+
+        <div class="row">
+            <div class="col-6">
+                <div>
+                    <h5 class="text-center">Habilidades</h5>
+                </div>
+                <div>
+                    <label for="vida" class="col-sm-2 col-form-label">Vida:</label>
+                    <div class="col-sm-10">
+                        <input type="number" class="form-control" id="vida">
+                    </div>
+                </div>
+                <div>
+                    <label for="ataque" class="col-sm-2 col-form-label">Ataque:</label>
+                    <div class="col-sm-10">
+                        <input type="number" class="form-control" id="ataque">
+                    </div>
+                </div>
+                <div>
+                    <label for="defensa" class="col-sm-2 col-form-label">Defensa:</label>
+                    <div class="col-sm-10">
+                        <input type="number" class="form-control" id="defensa">
+                    </div>
+                </div>
+                <div>
+                    <label for="especial" class="col-sm-2 col-form-label">Especial:</label>
+                    <div class="col-sm-10">
+                        <input type="number" class="form-control" id="especial">
+                    </div>
+                </div>
+                <div>
+                    <label for="velocidad" class="col-sm-2 col-form-label">Velocidad:</label>
+                    <div class="col-sm-10">
+                        <input type="number" class="form-control" id="velocidad">
+                    </div>
+                </div>
+            </div>
+            <!--Esta parte es para los movimientos del pokemon -->
+            <div class="col-6">
+                <div>
+                    <h5 class="text-center">Movimientos</h5>
+                </div>
+                <div>
+                    <label for="nombrem" class="col-sm-2 col-form-label">Nombre:</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="nombrem">
+                    </div>
+                </div>
+                <div>
+                    <label for="descripcionm" class="col-sm-2 col-form-label">Descripción:</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="descripcionm">
+                    </div>
+                </div>
+                <div>
+                    <label for="presicion" class="col-sm-2 col-form-label">Presición:</label>
+                    <div class="col-sm-10">
+                        <input type="number" class="form-control" id="presicion">
+                    </div>
+                </div>
+                <div>
+                    <label for="carga" class="col-sm-2 col-form-label">Carga de ataque:</label>
+                    <div class="col-sm-10">
+                        <input type="number" class="form-control" id="carga">
+                    </div>
+                </div>
+            </div>
+        </div><br>
+
+        <!--Esta parte es para los datos de la evolucion del pokemón-->
+
+        <div class="row">
+            <div class="col-6">
+                <div>
+                    <h5 class="text-center">Evolución</h5>
+                </div>
+                <div>
+                    <label for="nombreE" class="col-sm-2 col-form-label">Nombre:</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="nombreE">
+                    </div>
+                </div>
+                <div>
+                    <label for="descripcionE" class="col-sm-2 col-form-label">Descripción:</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="descripcionE">
+                    </div>
+                </div>
+            </div>
+            <div class="col-6">
+                <div>
+                    <h5 class="text-center">Carga aqui la imagen de tu pokemón</h5>
+                </div><br>
+                <div class="form-group">
+                    <input type="file" class="form-control-file" id="" accept="image/x-png,image/gif,image/jpeg">
+                </div><br>
+                <div>
+                    <button type="submit" class="btn btn-success" >Crear</button>
+                    <button type="reset" class="btn btn-primary">Limpiar formulario</button>
+                </div>
+            </div>
+
+        </div>
+    </form>
+</div><br>
 </body>
 </html>
