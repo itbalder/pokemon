@@ -3,6 +3,9 @@ package com.masters.pokemon.persistence.mapper;
 import com.masters.pokemon.domain.Type;
 import com.masters.pokemon.persistence.entity.TypeEntity;
 import org.mapstruct.*;
+import org.mapstruct.Mapper;
+import org.mapstruct.Mapping;
+import org.mapstruct.Mappings;
 
 @Mapper(componentModel = "spring")
 public interface TypeMapper {
