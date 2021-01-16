@@ -9,13 +9,13 @@ public class PokemonMovementsEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "movimientosId")
     private Integer idMovement;
-    @Column(name = "idTipo")
+    @Column(name = "tipoId")
     private  Integer typeId;
     @Column(name = "nombre")
     private String nameMovement;
     @Column(name = "potencia")
     private Integer powerMovement;
-    @Column(name = "precision")
+    @Column(name = "precisio")
     private Integer accuracyMovement;
     @Column(name = "descripcion")
     private String descriptionMovement;
@@ -42,6 +42,10 @@ public class PokemonMovementsEntity {
         this.typeId = typeId;
     }
 
+    public Integer getAccuracyMovement() {return accuracyMovement;}
+
+    public void setAccuracyMovement(Integer accuracyMovement) {this.accuracyMovement = accuracyMovement; }
+
     public String getNameMovement() {
         return nameMovement;
     }
@@ -56,14 +60,6 @@ public class PokemonMovementsEntity {
 
     public void setPowerMovement(Integer powerMovement) {
         this.powerMovement = powerMovement;
-    }
-
-    public Integer getAccuracyMovement() {
-        return accuracyMovement;
-    }
-
-    public void setAccuracyMovement(Integer accuracyMovement) {
-        this.accuracyMovement = accuracyMovement;
     }
 
     public String getDescriptionMovement() {

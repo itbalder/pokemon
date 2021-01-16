@@ -10,7 +10,7 @@ import javax.persistence.*;
 public class PokemonStatsEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "estadisticaId")
+    @Column(name = "estadisticasId")
     private Integer statId;
     @Column(name = "datosId")
     private String dataId;
