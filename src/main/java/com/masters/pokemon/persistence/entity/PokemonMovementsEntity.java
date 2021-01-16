@@ -8,23 +8,85 @@ public class PokemonMovementsEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "movimientosId")
-    private int movementId;
-
+    private Integer idMovement;
     @Column(name = "idTipo")
-    private  int typeId;
-
+    private  Integer typeId;
     @Column(name = "nombre")
-    private String name;
+    private String nameMovement;
     @Column(name = "potencia")
-    private int power;
+    private Integer powerMovement;
     @Column(name = "precision")
-    private int accuracy;
+    private Integer accuracyMovement;
     @Column(name = "descripcion")
-    private String description;
+    private String descriptionMovement;
     @Column(name = "cargaAtaque")
-    private int attackCharges;
+    private Integer attackChargesMovement;
 
     @ManyToOne
     @JoinColumn(name = "idTipo", insertable = false, updatable = false)
     private TypeEntity typeEntity;
+
+    public Integer getIdMovement() {
+        return idMovement;
+    }
+
+    public void setIdMovement(Integer idMovement) {
+        this.idMovement = idMovement;
+    }
+
+    public Integer getTypeId() {
+        return typeId;
+    }
+
+    public void setTypeId(Integer typeId) {
+        this.typeId = typeId;
+    }
+
+    public String getNameMovement() {
+        return nameMovement;
+    }
+
+    public void setNameMovement(String nameMovement) {
+        this.nameMovement = nameMovement;
+    }
+
+    public Integer getPowerMovement() {
+        return powerMovement;
+    }
+
+    public void setPowerMovement(Integer powerMovement) {
+        this.powerMovement = powerMovement;
+    }
+
+    public Integer getAccuracyMovement() {
+        return accuracyMovement;
+    }
+
+    public void setAccuracyMovement(Integer accuracyMovement) {
+        this.accuracyMovement = accuracyMovement;
+    }
+
+    public String getDescriptionMovement() {
+        return descriptionMovement;
+    }
+
+    public void setDescriptionMovement(String descriptionMovement) {
+        this.descriptionMovement = descriptionMovement;
+    }
+
+    public Integer getAttackChargesMovement() {
+        return attackChargesMovement;
+    }
+
+    public void setAttackChargesMovement(Integer attackChargesMovement) {
+        this.attackChargesMovement = attackChargesMovement;
+    }
+
+    public TypeEntity getTypeEntity() {
+        return typeEntity;
+    }
+
+    public void setTypeEntity(TypeEntity typeEntity) {
+        this.typeEntity = typeEntity;
+    }
 }

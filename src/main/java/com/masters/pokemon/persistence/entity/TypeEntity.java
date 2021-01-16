@@ -10,29 +10,45 @@ public class TypeEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "idTipo")
-    private  int typeId;
+    private  Integer typeId;
     @Column(name = "nombre")
-    private String name;
+    private String nameType;
 
-    public int getTypeId() {
+    public Integer getTypeId() {
         return typeId;
     }
 
-    public void setTypeId(int typeId) {
+    public void setTypeId(Integer typeId) {
         this.typeId = typeId;
     }
 
-    public String getName() {
-        return name;
+    public String getNameType() {
+        return nameType;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setNameType(String nameType) {
+        this.nameType = nameType;
     }
 
-    @OneToMany(mappedBy = "typeEntity")
-    private List<TypePk> movimientosPokemon;
+    @ManyToMany(mappedBy = "typeEntity")
+    private List<PokemonDataEntity> pokemonDataEntities;
 
     @OneToMany(mappedBy = "typeEntity")
-    private List<PokemonTypeEntity> datosPokemon;
+    private List<PokemonMovementsEntity> pokemonMovementsEntities;
+
+    public List<PokemonDataEntity> getPokemonDataEntities() {
+        return pokemonDataEntities;
+    }
+
+    public void setPokemonDataEntities(List<PokemonDataEntity> pokemonDataEntities) {
+        this.pokemonDataEntities = pokemonDataEntities;
+    }
+
+    public List<PokemonMovementsEntity> getPokemonMovementsEntities() {
+        return pokemonMovementsEntities;
+    }
+
+    public void setPokemonMovementsEntities(List<PokemonMovementsEntity> pokemonMovementsEntities) {
+        this.pokemonMovementsEntities = pokemonMovementsEntities;
+    }
 }
