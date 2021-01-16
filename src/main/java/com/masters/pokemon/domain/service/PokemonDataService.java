@@ -21,7 +21,7 @@ public class PokemonDataService {
     public Optional<PokemonData> getPokemon(int idDataPokemon){
         return pokemonRepository.getPokemon(idDataPokemon);
     }
-    public Optional<List<PokemonData>> getByTypee(int type){
+    public Optional<List<PokemonData>> getByType(int type){
         return pokemonRepository.getByType(type);
     }
     public PokemonData save(PokemonData pokemonData){

@@ -27,7 +27,7 @@ public class PokemonDataEntityController {
         return pokemonDataService.getPokemon(idDataPokemon);
     }
     public Optional<List<PokemonData>> getByType(int type){
-        return pokemonDataService.getByTypee(type);
+        return pokemonDataService.getByType(type);
     }
     public PokemonData save(PokemonData pokemonData){
         return pokemonDataService.save(pokemonData);

@@ -25,31 +25,31 @@ public class PokemonDataRepository implements PokemonRepository {
         return mapper.toPokemonsData(pokemonDataEntities);
     }
     //Obtener una lista de pokemones que pertenecen a cierto tipo ordenados de forma alfabetica mediante el querymethod
+
     public Optional<List<PokemonData>>getByType(int IdType){
         List<PokemonDataEntity> pokemonDataEntities=pokemonDataCrudRepository.findByTypeIdOrderByNamePokemonAsc(IdType);
         return Optional.of(mapper.toPokemonsData(pokemonDataEntities));
     }
     //Obtener la descripcion del pokemon
+    @Override
     public Optional<List<PokemonData>>getDescription(String pokemonDescription){
         Optional<List<PokemonDataEntity>> pokemonDataEntities=pokemonDataCrudRepository.findByDescriptionPokemon(pokemonDescription);
         //Lo convierte a PokemonDataEntitu y lo retorna
         return pokemonDataEntities.map(poke ->mapper.toPokemonsData(poke));
     }
-    //Obtener un poquemon por su Id por medio del findById que pertenece al JPA
+    //Obtener un poquemon por su Id por medio del findById que pertenece al JP
+    @Override
     public Optional<PokemonData> getPokemon(int idDataPokemon){
         return pokemonDataCrudRepository.findById(idDataPokemon).map(pokemon ->mapper.toPokemonDatae(pokemon)) ;
     }
-
-    @Override
-    public PokemonData save(PokemonData pokemonData) {
-        return null;
-    }
-
     //Guardar un pokemon
-    public PokemonDataEntity save(PokemonDataEntity pokemon){
-        return pokemonDataCrudRepository.save(pokemon);
+    @Override
+    public PokemonData save(PokemonData pokemon){
+        PokemonDataEntity pokemonDataEntity= mapper.toPokemonDataEntityes(pokemon);
+        return mapper.toPokemonDatae(pokemonDataCrudRepository.save(pokemonDataEntity));
     }
     //Eliminar un pokemon
+    @Override
     public void delete(int idDataPokemon){
         pokemonDataCrudRepository.deleteById(idDataPokemon);
     }
