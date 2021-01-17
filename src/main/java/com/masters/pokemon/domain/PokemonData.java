@@ -9,7 +9,7 @@ import com.masters.pokemon.persistence.entity.TypeEntity;
 
 
 public class PokemonData {
-    private String idDataPokemon;
+    private int idDataPokemon;
     private String pokemonName;
     private Double pokemonHeight;
     private Double pokemonWeight;
@@ -19,11 +19,11 @@ public class PokemonData {
     private  Integer idType;
     private Type Type;
 
-    public String getIdDataPokemon() {
+    public int getIdDataPokemon() {
         return idDataPokemon;
     }
 
-    public void setIdDataPokemon(String idDataPokemon) {
+    public void setIdDataPokemon(int idDataPokemon) {
         this.idDataPokemon = idDataPokemon;
     }
 

@@ -9,9 +9,9 @@ public class TypeEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "tipoId")
+    @Column(name = "tipoid")
     private  Integer typeId;
-    @Column(name = "nombreTipo")
+    @Column(name = "nombretipo")
     private String nameType;
 
     public Integer getTypeId() {
