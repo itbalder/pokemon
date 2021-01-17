@@ -18,6 +18,12 @@
 	<properties>
 		<java.version>11</java.version>
 		<org.mapstruct.version>1.4.1.Final</org.mapstruct.version>
+		<property name="javax.persistence.jdbc.driver" value="org.hsqldb.jdbcDriver"/>
+		<property name="javax.persistence.jdbc.url" value="jdbc:hsqldb:mem:testdb"/>
+		<property name="javax.persistence.jdbc.user" value="sa"/>
+		<property name="javax.persistence.jdbc.password" value=""/>
+		<property name="hibernate.hbm2ddl.auto" value="update"/>
+		<property name="hibernate.format_sql" value="true"/>
 	</properties>
 
 
