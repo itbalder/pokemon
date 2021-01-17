@@ -21,7 +21,7 @@ public class PokemonDataService {
 
     /**
      * <B>getAll method</B>
-     * @return getAll <String>pokemonRepository.getAll()</String>
+     * @return A <code>pokemonRepository.getAll()</code>
      * this returns every registry on the pokemon database for the table "datosPokemon"
      */
     public List<PokemonData> getAll(){
@@ -31,7 +31,7 @@ public class PokemonDataService {
     /**
      *<B>getPokemon Method</B>
      * @param idDataPokemon refers to the pokemon Id on the table "Datos pokemon" is an int value and needs to exists on the database
-     * @return getPokemon <String>pokemonRepository.getPokemon(idDataPokemon)</String> Returns the specified pokemon  according to the id param
+     * @return A <code>pokemonRepository.getPokemon(idDataPokemon)</code> Returns the specified pokemon  according to the id param
      */
     public Optional<PokemonData> getPokemon(int idDataPokemon){
         return pokemonRepository.getPokemon(idDataPokemon);
@@ -41,7 +41,7 @@ public class PokemonDataService {
     /**
      * <B>Save Method</B>
      * @param pokemonData refers to an object from public class PokemonData
-     * @return save<String>pokemonRepository.save(pokemonData)</String> Saves the pokemon object on the "datosPokemon" table from Database
+     * @return A<code>pokemonRepository.save(pokemonData)</code> Saves the pokemon object on the "datosPokemon" table from Database
      */
     public PokemonData save(PokemonData pokemonData){
         return pokemonRepository.save(pokemonData);
@@ -51,7 +51,7 @@ public class PokemonDataService {
     /**
      *<B>getByType Method</B>
      * @param type refers to the pokemon type Id on the table "tipos" is an int value and it needs to exists on the database
-     * @return getByType <String>pokemonRepository.getByType(type)</String> Returns the specified pokemon according to the type of the id parameter related to the pokemon
+     * @return A <code>pokemonRepository.getByType(type)</code> Returns the specified pokemon according to the type of the id parameter related to the pokemon
      */
     public Optional<List<PokemonData>> getByType(int type){
         return pokemonRepository.getByType(type);
@@ -61,7 +61,7 @@ public class PokemonDataService {
     /**
      *<B>Delete Method </B>
      * @param idDataPokemon is an int value and needs to exists on the database
-     * @return delete<String>pokemonRepository.delete(idDataPokemon)</String> Deletes the pokemon data from "datosPokemon" where id matches with the given parameter
+     * @return delete<code>pokemonRepository.delete(idDataPokemon)</code> Deletes the pokemon data from "datosPokemon" where id matches with the given parameter
      */
 
     public boolean delete(int idDataPokemon){

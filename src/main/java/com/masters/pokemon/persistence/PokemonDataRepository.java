@@ -24,8 +24,8 @@ public class PokemonDataRepository implements PokemonRepository {
     private PokemonDataMapper mapper;
 
     /**
-     * <B>get All List</>
-     * @return a mapped list for each pokemon using toPokemonsData method
+     * <B>get All List</B>
+     * @return a <code>mapper.toPokemonsData</code> mapped list for each pokemon using toPokemonsData method
      *
      */
     public List<PokemonData> getAll(){
@@ -36,7 +36,7 @@ public class PokemonDataRepository implements PokemonRepository {
     /**
      * <B>getByType List</B>
      * @param IdType refers to an int value it has to match with any existing on the database
-     * @return a mapped list of pokemon that belong to the  type id related on the param inserted ordered by ascending alphabetical order
+     * @return a <code>Optional.of</code>mapped list of pokemon that belong to the  type id related on the param inserted ordered by ascending alphabetical order
      *
      */
     public Optional<List<PokemonData>>getByType(int IdType){
@@ -47,7 +47,7 @@ public class PokemonDataRepository implements PokemonRepository {
     /**
      * <B>Get Description</B>
      * @param pokemonDescription refers to a int value
-     * @return the specified description of a pokemon
+     * @return <code>pokemonDataEntities.map</code>the specified description of a pokemon
      */
     @Override
     public Optional<List<PokemonData>>getDescription(int pokemonDescription){
@@ -58,7 +58,7 @@ public class PokemonDataRepository implements PokemonRepository {
     /**
      * <B>get Pokemon List</B>
      * @param idDataPokemon refers to the pokemon Id
-     * @return the specified pokemon data according to the id matched on the database
+     * @return <code>pokemonDataCrudRepository.findById</code>the specified pokemon data according to the id matched on the database
      */
     @Override
     public Optional<PokemonData> getPokemon(int idDataPokemon){
@@ -68,7 +68,7 @@ public class PokemonDataRepository implements PokemonRepository {
     /**
      *
      * @param pokemon refers to an object from PokemonData class
-     * @return saves the object on a mapped list
+     * @return <code>mapper.toPokemonDatae</code>saves the object on a mapped list
      */
     @Override
     public PokemonData save(PokemonData pokemon){
@@ -79,7 +79,7 @@ public class PokemonDataRepository implements PokemonRepository {
     /**
      *
      * @param idDataPokemon refers to the pokemon id it has to exist on the database
-     * @return Deletes the pokemon with the specified Id
+     * Deletes the pokemon with the specified Id
      */
     @Override
     public void delete(int idDataPokemon){

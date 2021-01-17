@@ -29,7 +29,7 @@ public interface TypeMapper {
      * <B>Ignore Type</B>
      * @param type to an object of the type class
      *
-     * @return Ignores the values that are not used
+     * @return <code>Mappings</code>Ignores the values that are not used
      */
     @InheritInverseConfiguration
     @Mappings({

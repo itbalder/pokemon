@@ -40,7 +40,7 @@ public interface PokemonDataMapper {
     /**
      * <B>Invert to PokemonData</B>
      * @param pokemonData refers to the converted PokemonData List
-     * @return a PokemonDataList
+     * @return a <code> toPokemonDataEntityes</code>PokemonDataList
      */
     @InheritInverseConfiguration
     @Mapping(target = "pokemonStatsEntities",ignore = true)
