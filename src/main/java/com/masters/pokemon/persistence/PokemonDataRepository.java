@@ -32,7 +32,7 @@ public class PokemonDataRepository implements PokemonRepository {
     }
     //Obtener la descripcion del pokemon
     @Override
-    public Optional<List<PokemonData>>getDescription(String pokemonDescription){
+    public Optional<List<PokemonData>>getDescription(int pokemonDescription){
         Optional<List<PokemonDataEntity>> pokemonDataEntities=pokemonDataCrudRepository.findByDescriptionPokemon(pokemonDescription);
         //Lo convierte a PokemonDataEntity y lo retorna
         return pokemonDataEntities.map(poke ->mapper.toPokemonsData(poke));

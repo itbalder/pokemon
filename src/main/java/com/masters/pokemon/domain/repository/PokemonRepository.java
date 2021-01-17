@@ -10,7 +10,7 @@ public interface PokemonRepository {
     //Creacion de objetos que se encargaran de la logica del domino o del negocio
     List<PokemonData> getAll();
     Optional<List<PokemonData>> getByType(int type);
-    Optional<List<PokemonData>> getDescription(String pokemonDescription);
+    Optional<List<PokemonData>> getDescription(int pokemonDescription);
     Optional<PokemonData> getPokemon(int idDataPokemon);
     PokemonData save(PokemonData pokemonData);
     void delete(int dataId);

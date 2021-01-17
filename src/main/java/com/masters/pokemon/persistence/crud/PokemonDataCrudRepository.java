@@ -12,5 +12,5 @@ public interface PokemonDataCrudRepository extends CrudRepository<PokemonDataEnt
     List<PokemonDataEntity> findByTypeIdOrderByNamePokemonAsc(int typeId);
 
     //Trae la descripcion
-    Optional<List<PokemonDataEntity>> findByDescriptionPokemon(String descriptionPokemon);
+    Optional<List<PokemonDataEntity>> findByDescriptionPokemon(int descriptionPokemon);
 }
