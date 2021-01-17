@@ -4,11 +4,11 @@ import javax.persistence.*;
 import java.util.List;
 
 @Entity
-@Table(name = "datosPokemon")
+@Table(name = "datospokemon")
 public class PokemonDataEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "datosId")
+    @Column(name = "datosid")
     private Integer dataId;
     @Column(name = "nombre")
     private String namePokemon;
@@ -22,11 +22,11 @@ public class PokemonDataEntity {
     private Integer priorityPokemon;
     @Column(name = "evolucion")
     private String evolutionPokemon;
-    @Column(name = "tipoId")
+    @Column(name = "tipoid")
     private Integer typeId;
 
     @ManyToOne
-    @JoinColumn(name = "tipoId", insertable = false, updatable = false)
+    @JoinColumn(name = "tipoid", insertable = false, updatable = false)
     private TypeEntity typeEntity;
 
     @OneToMany (mappedBy = "pokemonDataEntity")

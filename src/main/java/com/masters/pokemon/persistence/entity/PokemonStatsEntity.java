@@ -5,14 +5,14 @@ import io.swagger.models.auth.In;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "estadisticasPokemon")
+@Table(name = "estadisticaspokemon")
 
 public class PokemonStatsEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "estadisticasId")
+    @Column(name = "estadisticasid")
     private Integer statId;
-    @Column(name = "datosId")
+    @Column(name = "datosid")
     private String dataId;
     @Column(name = "puntosVida")
     private Integer healthPointsStats;
@@ -26,7 +26,7 @@ public class PokemonStatsEntity {
     private Integer speedStats;
 
     @OneToOne
-    @JoinColumn(name = "datosId", insertable = false, updatable = false)
+    @JoinColumn(name = "datosid", insertable = false, updatable = false)
     private PokemonDataEntity pokemonDataEntity;
 
     public Integer getStatId() {

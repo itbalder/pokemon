@@ -3,13 +3,13 @@ package com.masters.pokemon.persistence.entity;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "movimientosPokemon")
+@Table(name = "movimientospokemon")
 public class PokemonMovementsEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "movimientosId")
+    @Column(name = "movimientosid")
     private Integer idMovement;
-    @Column(name = "tipoId")
+    @Column(name = "tipoid")
     private  Integer typeId;
     @Column(name = "nombre")
     private String nameMovement;
@@ -19,11 +19,11 @@ public class PokemonMovementsEntity {
     private Integer accuracyMovement;
     @Column(name = "descripcion")
     private String descriptionMovement;
-    @Column(name = "cargaAtaque")
+    @Column(name = "cargaataque")
     private Integer attackChargesMovement;
 
     @ManyToOne
-    @JoinColumn(name = "idTipo", insertable = false, updatable = false)
+    @JoinColumn(name = "tipoid", insertable = false, updatable = false)
     private TypeEntity typeEntity;
 
     public Integer getIdMovement() {
