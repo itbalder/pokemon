@@ -1,6 +1,7 @@
 package com.masters.pokemon.domain;
 
 /**
+ * <B>Pokemon Stats</B>
  * This class saves variables,setters and getters
  * for every pokemon stat implemented to a pokemon
  */

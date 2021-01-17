@@ -6,6 +6,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
 /**
+ * <B> Type</B>
  * This class saves variables,setters and getters
  * for every pokemon type
  */

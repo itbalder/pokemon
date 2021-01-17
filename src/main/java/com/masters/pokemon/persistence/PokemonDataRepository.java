@@ -10,7 +10,10 @@ import org.springframework.stereotype.Repository;
 
 import java.util.List;
 import java.util.Optional;
-//Indica que esta clase sera la que interactura con la base de datos
+/**
+ * <B>Pokemon Data Repository</B>
+ * This class acts as repository by interacting with the database
+ */
 @Repository
 public class PokemonDataRepository implements PokemonRepository {
     /*Con la notacion @Autowire Los objetos que reciben esta notacion se le cede el control a spring para qie cree en automtico
@@ -20,35 +23,64 @@ public class PokemonDataRepository implements PokemonRepository {
     @Autowired
     private PokemonDataMapper mapper;
 
+    /**
+     * <B>get All List</>
+     * @return a mapped list for each pokemon using toPokemonsData method
+     *
+     */
     public List<PokemonData> getAll(){
         List<PokemonDataEntity> pokemonDataEntities =(List<PokemonDataEntity>)pokemonDataCrudRepository.findAll();
         return mapper.toPokemonsData(pokemonDataEntities);
     }
-    //Obtener una lista de pokemones que pertenecen a cierto tipo ordenados de forma alfabetica mediante el querymethod
 
+    /**
+     * <B>getByType List</B>
+     * @param IdType refers to an int value it has to match with any existing on the database
+     * @return a mapped list of pokemon that belong to the  type id related on the param inserted ordered by ascending alphabetical order
+     *
+     */
     public Optional<List<PokemonData>>getByType(int IdType){
         List<PokemonDataEntity> pokemonDataEntities=pokemonDataCrudRepository.findByTypeIdOrderByNamePokemonAsc(IdType);
         return Optional.of(mapper.toPokemonsData(pokemonDataEntities));
     }
-    //Obtener la descripcion del pokemon
+
+    /**
+     * <B>Get Description</B>
+     * @param pokemonDescription refers to a int value
+     * @return the specified description of a pokemon
+     */
     @Override
     public Optional<List<PokemonData>>getDescription(int pokemonDescription){
         Optional<List<PokemonDataEntity>> pokemonDataEntities=pokemonDataCrudRepository.findByDescriptionPokemon(pokemonDescription);
-        //Lo convierte a PokemonDataEntity y lo retorna
         return pokemonDataEntities.map(poke ->mapper.toPokemonsData(poke));
     }
-    //Obtener un poquemon por su Id por medio del findById que pertenece al JP
+
+    /**
+     * <B>get Pokemon List</B>
+     * @param idDataPokemon refers to the pokemon Id
+     * @return the specified pokemon data according to the id matched on the database
+     */
     @Override
     public Optional<PokemonData> getPokemon(int idDataPokemon){
         return pokemonDataCrudRepository.findById(idDataPokemon).map(pokemon ->mapper.toPokemonDatae(pokemon)) ;
     }
-    //Guardar un pokemon
+
+    /**
+     *
+     * @param pokemon refers to an object from PokemonData class
+     * @return saves the object on a mapped list
+     */
     @Override
     public PokemonData save(PokemonData pokemon){
         PokemonDataEntity pokemonDataEntity= mapper.toPokemonDataEntityes(pokemon);
         return mapper.toPokemonDatae(pokemonDataCrudRepository.save(pokemonDataEntity));
     }
-    //Eliminar un pokemon
+
+    /**
+     *
+     * @param idDataPokemon refers to the pokemon id it has to exist on the database
+     * @return Deletes the pokemon with the specified Id
+     */
     @Override
     public void delete(int idDataPokemon){
         pokemonDataCrudRepository.deleteById(idDataPokemon);

@@ -2,12 +2,12 @@ package com.masters.pokemon.domain;
 
 import com.masters.pokemon.persistence.entity.TypeEntity;
 
+
 /**
+ * <B>Pokemon Data</B>
  * This class saves variables,setters and getters
  * for every pokemon created
  */
-
-
 public class PokemonData {
     private int idDataPokemon;
     private String pokemonName;

@@ -1,7 +1,12 @@
 package com.masters.pokemon.persistence.entity;
 
 import javax.persistence.*;
-
+/**
+ * <B>Pokemon Movements Entity</B>
+ * This class creates the references between
+ * table "movimientosPokemon" and  variables from this class
+ * Also includes every setter and getter for each variable to generate access to them
+ */
 @Entity
 @Table(name = "movimientospokemon")
 public class PokemonMovementsEntity {

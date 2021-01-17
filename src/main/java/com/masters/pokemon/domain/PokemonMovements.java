@@ -1,5 +1,6 @@
 package com.masters.pokemon.domain;
 /**
+ * <B> Pokemon Movements</B>
  * This class saves variables,setters and getters
  * for every pokemon movement implemented to a pokemon
  */

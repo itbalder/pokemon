@@ -3,7 +3,12 @@ package com.masters.pokemon.persistence.entity;
 import io.swagger.models.auth.In;
 
 import javax.persistence.*;
-
+/**
+ * <B>Pokemon Movements Entity</B>
+ * This class creates the references between
+ * table "moviemientospokemon" and  variables from this class
+ * Also includes every setter and getter for each variable to generate access to them
+ */
 @Entity
 @Table(name = "estadisticaspokemon")
 

@@ -3,6 +3,12 @@ package com.masters.pokemon.persistence.entity;
 import javax.persistence.*;
 import java.util.List;
 
+/**
+ * <B>Pokemon Type Entity</B>
+ * This class creates the references between
+ * table "tipo" and  variables from this class
+ * Also includes every setter and getter for each variable to generate access to them
+ */
 @Entity
 @Table(name = "tipo")
 public class TypeEntity {

@@ -7,6 +7,11 @@ import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 import org.mapstruct.Mappings;
 
+/**
+ * <B>Type Mapper</B>
+ * This class maps Class Type and TypeEntity
+ *
+ */
 @Mapper(componentModel = "spring")
 public interface TypeMapper {
 
@@ -17,9 +22,15 @@ public interface TypeMapper {
 
             }
     )
+
     Type toType(TypeEntity typeEntity);
 
-    ////Objetos que no se utilizaran indicamos que se ignoraran
+    /**
+     * <B>Ignore Type</B>
+     * @param type to an object of the type class
+     *
+     * @return Ignores the values that are not used
+     */
     @InheritInverseConfiguration
     @Mappings({
             @Mapping(target = "pokemonDataEntities", ignore = true),
