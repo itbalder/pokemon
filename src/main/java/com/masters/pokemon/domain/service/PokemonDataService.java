@@ -21,9 +21,6 @@ public class PokemonDataService {
     public Optional<PokemonData> getPokemon(int idDataPokemon){
         return pokemonRepository.getPokemon(idDataPokemon);
     }
-    public Optional<List<PokemonData>> getByType(int type){
-        return pokemonRepository.getByType(type);
-    }
     public PokemonData save(PokemonData pokemonData){
         return pokemonRepository.save(pokemonData);
     }
@@ -33,6 +30,7 @@ public class PokemonDataService {
             pokemonRepository.delete(idDataPokemon);
             return true;
         }).orElse(false);
+
     }
 
 }
